@@ -4,7 +4,7 @@ public class Holjjak {
     public static void main(String[] args) {
         int mylife = 10, yourlife = 10; //보유 구슬
         int myball, yourball = 0; //배팅 구슬
-        String myanswer = "" , answer = "";
+        String myanswer = "", answer = "";
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("오징어 게임에 오신것을 환영합니다.");
@@ -28,10 +28,9 @@ public class Holjjak {
             System.out.print("상대방의 구슬을 홀, 짝을 입력하여 추리하세요.");
             myanswer = scanner.next();
 
-            if(yourball % 2 == 0){
+            if (yourball % 2 == 0) {
                 answer = "짝";
-            }
-            else if (yourball % 2 != 0){
+            } else if (yourball % 2 != 0) {
                 answer = "홀";
             }
             System.out.println("=======================================");
@@ -39,17 +38,15 @@ public class Holjjak {
             System.out.println("상대가 낸 구슬 갯수 : " + yourball);
             System.out.println("=======================================");
 
-            if(myanswer.equalsIgnoreCase(answer)){
+            if (myanswer.equalsIgnoreCase(answer)) {
                 mylife += yourball;
                 yourlife -= yourball;
                 System.out.println("승리하였습니다.");
-            }
-            else if (!(myanswer.equalsIgnoreCase(answer))){
+            } else if (!(myanswer.equalsIgnoreCase(answer))) {
                 yourlife += myball;
                 mylife -= myball;
                 System.out.println("상대방한테 졌습니다.");
-            }
-            else{
+            } else {
                 System.out.println("비겼습니다.");
             }
             System.out.println("=======================================");
