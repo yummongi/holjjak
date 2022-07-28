@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.TimerTask;
 
 public class Holjjak {
     public static void main(String[] args) {
@@ -38,17 +39,24 @@ public class Holjjak {
             System.out.println("상대가 낸 구슬 갯수 : " + yourball);
             System.out.println("=======================================");
 
+
             if (myanswer.equalsIgnoreCase(answer)) {
-                mylife += yourball;
-                yourlife -= yourball;
+                mylife += myball;
+                yourlife -= myball;
                 System.out.println("승리하였습니다.");
             } else if (!(myanswer.equalsIgnoreCase(answer))) {
-                yourlife += myball;
-                mylife -= myball;
+                yourlife += yourball;
+                mylife -= yourball;
                 System.out.println("상대방한테 졌습니다.");
             } else {
                 System.out.println("비겼습니다.");
             }
+
+            if(mylife < 0 || yourlife < 0){
+                mylife = 0;
+                yourlife = 0;
+            }
+
             System.out.println("=======================================");
             System.out.println("현재 나의 구슬 갯수: " + mylife);
             System.out.println("현재 상대방 구슬 갯수: " + yourlife);
