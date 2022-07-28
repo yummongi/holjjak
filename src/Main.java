@@ -19,12 +19,11 @@ public class Main {
 
                 System.out.print("자신이 베팅할 구슬 갯수를 입력하세요: (1~10 입력)");
                 myball = scanner.nextInt();
-            } while (myball < 1 || myball > 11);
+            } while (myball < 1 || myball > mylife);
             System.out.println("=======================================");
             System.out.println("시작합니다.");
 
-            yourball = (int) (Math.random() * 10) + 1; // 1 ~ 10 까지
-
+            yourball = (int) (Math.random() * yourlife) + 1; // 1 ~ 10 까지
 
             System.out.println("상대방이 낸 구슬 갯수: " + yourball);
             System.out.println("내가 낸 구슬 갯수: " + myball);
