@@ -20,7 +20,7 @@ public class Base {
     }
 
     //인트로 메세지
-    public static void intro() {
+    public void intro() {
         System.out.println("오징어 게임에 오신것을 환영합니다.");
         System.out.println("이번 게임은 구슬 게임입니다.");
         System.out.println("당신과 나는 각각 10개의 구슬을 가지고 있습니다.");
@@ -32,11 +32,11 @@ public class Base {
 
     //승리, 패배 시 구슬 설정
     public void setBall() {
-        if (myanswer.equalsIgnoreCase(answer)) {
+        if (myanswer.equals(answer)) {
             mylife += myball;
             yourlife -= myball;
             System.out.println("승리하였습니다.");
-        } else if (!(myanswer.equalsIgnoreCase(answer))) {
+        } else if (!(myanswer.equals(answer))) {
             yourlife += yourball;
             mylife -= yourball;
             System.out.println("상대방한테 졌습니다.");
