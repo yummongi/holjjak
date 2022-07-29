@@ -1,18 +1,10 @@
 import java.util.Scanner;
-import java.util.TimerTask;
 
-public class Holjjak {
-
-    public static void main(String[] args) {
-        gameStart();
-    }
-
-    static int mylife = 10, yourlife = 10; //보유 구슬
-    static int myball, yourball = 0; //배팅 구슬
-    static String myanswer = "", answer = "";
-
-    public static void gameStart() {
-        Scanner scanner = new Scanner(System.in);
+public class Base {
+    public int mylife = 10, yourlife = 10; //보유 구슬
+    public int myball, yourball = 0; //배팅 구슬
+    public String myanswer = "", answer = "";
+    public static void intro(){
         System.out.println("오징어 게임에 오신것을 환영합니다.");
         System.out.println("이번 게임은 구슬 게임입니다.");
         System.out.println("당신과 나는 각각 10개의 구슬을 가지고 있습니다.");
@@ -20,6 +12,11 @@ public class Holjjak {
         System.out.println("시작합니다.");
         System.out.println("배팅 하세요");
         System.out.println("=======================================");
+    }
+
+    public void gameStart() {
+        Scanner scanner = new Scanner(System.in);
+        intro();
         try {
             do {
                 do {
@@ -74,6 +71,3 @@ public class Holjjak {
         }
     }
 }
-
-
-
