@@ -58,6 +58,13 @@ public class Base {
         }
     }
 
+    //구슬 설정
+    public Base setLife(int mylife, int yourlife){
+        this.mylife = mylife;
+        this.yourlife = yourlife;
+        return new Base(this.mylife, this.yourlife);
+    }
+
     //게임 시작
     public void gameStart() {
         Scanner scanner = new Scanner(System.in);
