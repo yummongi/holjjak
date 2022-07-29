@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Base {
-    public int mylife, yourlife; //보유 구슬
-    public int myball, yourball; //배팅 구슬
-    public String myanswer, answer;
+    private int mylife, yourlife; //보유 구슬
+    private int myball, yourball; //배팅 구슬
+    private String myanswer, answer;
 
     //생성자
     Base(){
@@ -20,7 +20,7 @@ public class Base {
     }
 
     //인트로 메세지
-    public void intro() {
+    private void intro() {
         System.out.println("오징어 게임에 오신것을 환영합니다.");
         System.out.println("이번 게임은 구슬 게임입니다.");
         System.out.println("당신과 나는 각각 10개의 구슬을 가지고 있습니다.");
@@ -31,7 +31,7 @@ public class Base {
     }
 
     //승리, 패배 시 구슬 설정
-    public void setBall() {
+    private void setBall() {
         if (myanswer.equals(answer)) {
             mylife += myball;
             yourlife -= myball;
@@ -46,7 +46,7 @@ public class Base {
     }
 
     //승리 시 메세지
-    public void victory(){
+    private void victory(){
         if (mylife <= 0) {
             System.out.println("=======================================");
             System.out.println("나의 구슬을 모두 잃었습니다.");
