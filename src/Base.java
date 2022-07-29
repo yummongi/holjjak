@@ -78,7 +78,11 @@ public class Base {
                 myanswer = scanner.next();
 
                 if (myanswer.equals("홀") || myanswer.equals("짝")) {
-                    answer = yourball % 2 == 0 ? "짝" : "홀";
+
+                    if(yourball % 2 == 0)
+                        answer = "짝";
+                    else
+                        answer = "홀";
 
                     System.out.println("=======================================");
                     System.out.println("내가 낸 구슬 갯수 : " + myball);
