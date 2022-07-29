@@ -34,11 +34,8 @@ public class Holjjak {
                 System.out.print("상대방의 구슬을 홀, 짝을 입력하여 추리하세요.");
                 myanswer = scanner.next();
 
-                if (yourball % 2 == 0) {
-                    answer = "짝";
-                } else if (yourball % 2 != 0) {
-                    answer = "홀";
-                }
+                answer = yourball % 2 == 0 ? "짝" : "홀";
+
                 System.out.println("=======================================");
                 System.out.println("내가 낸 구슬 갯수 : " + myball);
                 System.out.println("상대가 낸 구슬 갯수 : " + yourball);
